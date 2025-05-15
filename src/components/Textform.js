@@ -19,6 +19,12 @@ export default function Textform(props) {
 
     }
 
+    const handleClearClick = ()=>{
+        let newText = "";
+        setText(newText);
+    }
+
+
     return (
         <>
             <div className='container' >
@@ -27,6 +33,7 @@ export default function Textform(props) {
                     <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="6"></textarea>
                 </div>
                 <button className="btn btn-primary" onClick={handleUpClick} >Convert to Uppercase</button>
+                <button className="btn btn-secondary" onClick={handleClearClick}>Reset</button>
             </div>
             <div className='container my-3 '>
                 <h1> Your text summary</h1>
